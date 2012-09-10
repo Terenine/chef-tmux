@@ -16,7 +16,7 @@
 # See the License for the specific language governing permissions and
 #
 
-if node['platform'] == 'centos'
+if node['platform'] == 'centos' || node['platform'] == 'redhat'
   Chef::Log.info('There is not a tmux package for CentOS. Compiling from source...')
   package 'libevent-devel'
   package 'ncurses-devel'
